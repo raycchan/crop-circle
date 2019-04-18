@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import CropView from './components/CropView';
 
 class App extends Component {
   render() {
@@ -8,6 +9,8 @@ class App extends Component {
         <header className="App-header">
           Crop Circle
         </header>
+
+        <CropView />
       </div>
     );
   }
