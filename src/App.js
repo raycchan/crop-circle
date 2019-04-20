@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import CropView from './components/CropView';
+import SideBar from './components/SideBar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+        <header className="header">
           Crop Circle
         </header>
 
-        <CropView />
+        <SideBar />
+
+        <div className='main'>
+          <CropView />
+        </div>
       </div>
     );
   }
