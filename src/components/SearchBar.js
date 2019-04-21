@@ -1,26 +1,20 @@
 import React from 'react';
 
+import './SearchBar.scss';
+
 class SearchBar extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { searchTerm: '' }
-
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    const searchTerm = event.target.value;
-    this.setState({ searchTerm: searchTerm });
-    this.props.setSearchTerm(searchTerm);
+    this.props.setSearchTerm(event.target.value);
   }
 
   render() {
     return (
-      <input
-        autoFocus
-        type='text'
-        value={this.state.searchTerm}
-        onChange={this.handleChange} />
+      <input autoFocus type='text' onChange={this.handleChange} />
     );
   }
 }

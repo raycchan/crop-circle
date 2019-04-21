@@ -16,10 +16,6 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <header className='header'>
-          Crop Circle
-        </header>
-
         <SideBar setSearchTerm={this.setSearchTerm} />
 
         <div className='main'>

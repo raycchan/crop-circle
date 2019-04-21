@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import './CropImageGrid.css';
+
+import './CropImageGrid.scss';
 import CropImage from './CropImage';
 
 class CropImageGrid extends React.Component {

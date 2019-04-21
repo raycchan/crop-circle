@@ -1,8 +1,19 @@
 import React from 'react';
-import './SideBar.css';
+
+import './SideBar.scss';
+import imageProperties from './../data/ImageProperties'
 import SearchBar from './SearchBar';
 
 class SideBar extends React.Component {
+  constructor(props){
+    super(props);
+    this.imageProperties = imageProperties
+  }
+
+  cropNames() {
+    return this.imageProperties.map(property => (property.name)).sort()
+  }
+
   render() {
     return (
       <div className='sidebar'>
@@ -17,19 +28,13 @@ class SideBar extends React.Component {
         </div>
 
         <ul>
-          <li>Arugula</li>
-          <li>Basil</li>
-          <li>Bok Choy</li>
-          <li>Kale</li>
-          <li>Kohlrabi</li>
-          <li>Lettuce</li>
-          <li>Mustard Green</li>
-          <li>Oakleaf</li>
-          <li>Romaine</li>
+          {this.cropNames().map(name => (<li key={name}>{name}</li>))}
         </ul>
 
         <div className='github'>
-          <a href='https://github.com/raycchan/crop-circle'>github source code</a>
+          <a href='https://github.com/raycchan/crop-circle' target='blank'>
+            github source code
+          </a>
         </div>
       </div>
     );

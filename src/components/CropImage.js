@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import './CropImage.css';
+
+import './CropImage.scss';
 
 class CropImage extends React.Component {
   render() {
     const { cropName, searchTerm, src } = this.props
 
     return (
-      <div className={cropName === searchTerm ? 'circled' : ''}>
-        <img src={src} />
+      <div className={cropName.toLowerCase() === searchTerm ? 'circled' : ''}>
+        <img src={src} alt={cropName} />
       </div>
     );
   }
