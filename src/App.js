@@ -4,17 +4,26 @@ import CropView from './components/CropView';
 import SideBar from './components/SideBar';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { searchTerm: '' }
+  }
+
+  setSearchTerm = (searchTerm) => {
+    this.setState(state => ({ searchTerm: searchTerm.toLowerCase() }));
+  }
+
   render() {
     return (
-      <div className="app">
-        <header className="header">
+      <div className='app'>
+        <header className='header'>
           Crop Circle
         </header>
 
-        <SideBar />
+        <SideBar setSearchTerm={this.setSearchTerm} />
 
         <div className='main'>
-          <CropView />
+          <CropView searchTerm={this.state.searchTerm}/>
         </div>
       </div>
     );

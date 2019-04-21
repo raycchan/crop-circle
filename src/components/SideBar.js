@@ -10,7 +10,7 @@ class SideBar extends React.Component {
           Crop Circle
         </div>
 
-        <SearchBar />
+        <SearchBar {...this.props} />
 
         <div className='instructions'>
           Type in one of the below to identify which photo it belongs to!
@@ -27,6 +27,10 @@ class SideBar extends React.Component {
           <li>Oakleaf</li>
           <li>Romaine</li>
         </ul>
+
+        <div className='github'>
+          <a href='https://github.com/raycchan/crop-circle'>github source code</a>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,11 @@
 img {
   height: 150px;
   width: 150px;
+  border-radius: 25%;
   object-fit: cover;
+}
+
+.circled {
+  border-radius: 50%;
+  background-color: #230720;
 }

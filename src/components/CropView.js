@@ -16,7 +16,9 @@ const imageProperties = [
 class CropView extends React.Component {
   render() {
     return (
-      <CropImageGrid imageProperties={imageProperties} />
+      <CropImageGrid
+        imageProperties={imageProperties}
+        searchTerm={this.props.searchTerm} />
     );
   }
 }

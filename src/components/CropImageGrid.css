@@ -1,8 +1,12 @@
-img {
+.image-grid {
+  min-width: 630px;
+}
+
+.image-grid > div {
   float: left;
   padding: 30px;
 }
 
-img:nth-child(3n + 1) {
+.image-grid > div:nth-child(3n + 1) {
   clear: both;
 }

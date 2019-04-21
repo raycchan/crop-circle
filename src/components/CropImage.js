@@ -4,15 +4,18 @@ import './CropImage.css';
 
 class CropImage extends React.Component {
   render() {
-    const { src } = this.props
+    const { cropName, searchTerm, src } = this.props
 
     return (
-      <img src={src} alt='crop' />
+      <div className={cropName === searchTerm ? 'circled' : ''}>
+        <img src={src} />
+      </div>
     );
   }
 }
 
 CropImage.propTypes = {
+  cropName: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired
 };
 
