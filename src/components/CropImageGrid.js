@@ -12,7 +12,7 @@ class CropImageGrid extends React.Component {
       <div className="image-grid">
         {imageProperties.map(imageProperty => (
           <CropImage
-            src={imageProperty.src}
+            fileName={"/images/" + imageProperty.fileName}
             key={imageProperty.name}
             cropName={imageProperty.name}
             searchTerm={this.props.searchTerm} />

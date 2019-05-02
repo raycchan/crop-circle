@@ -5,11 +5,11 @@ import './CropImage.scss';
 
 class CropImage extends React.Component {
   render() {
-    const { cropName, searchTerm, src } = this.props
+    const { cropName, searchTerm, fileName } = this.props
 
     return (
       <div className={cropName.toLowerCase() === searchTerm ? 'circled' : ''}>
-        <img src={src} alt={cropName} />
+        <img src={fileName} alt={cropName} />
       </div>
     );
   }
@@ -17,7 +17,7 @@ class CropImage extends React.Component {
 
 CropImage.propTypes = {
   cropName: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired
+  fileName: PropTypes.string.isRequired
 };
 
 export default CropImage;
