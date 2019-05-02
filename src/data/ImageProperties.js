@@ -7,7 +7,7 @@ const imageProperties = [
   { name: 'Romaine'      , src: 'https://www.cambridgema.gov/~/media/Images/publicinformationoffice/newsphotos/Romaine.jpg'},
   { name: 'Lettuce'      , src: 'https://www.veritable-potager.fr/398-thickbox_default/butterhead-lettuce.jpg'},
   { name: 'Mustard Green', src: 'https://www.rawl.net/media/1131/mustard_1200.jpg'},
-  { name: 'Oakleaf'      , src: 'https://www.kingfreshfarm.com/wp-content/uploads/2017/09/Green-Oak-Lettuce-7.jpg'}
+  { name: 'Oakleaf'      , src: 'https://www.montecitourbanfarms.com/wp-content/uploads/2014/08/MUF-Green-Oakleaf.jpg'}
 ];
 
 export default imageProperties;
